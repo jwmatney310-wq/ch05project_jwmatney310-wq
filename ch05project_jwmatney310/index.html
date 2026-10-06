@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Jackson Matney | October 6, 2026 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating HTML Forms with JavaScript</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/form-validation.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Validating HTML Forms with JavaScript</h1>
+        <p>Jackson Matney | CTI110</p>
+    </header>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#contact-form">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Contact Form</h2>
+            <p>Complete all three fields. Your email must contain at least eight characters and use an email address format.</p>
+            <form id="contact-form" novalidate>
+                <label for="full-name">Full name (required)</label>
+                <input type="text" id="full-name" name="full-name" class="required" autocomplete="name" required>
+
+                <label for="email">Email address (required)</label>
+                <input type="email" id="email" name="email" class="required" autocomplete="email" aria-describedby="email-help" required>
+                <p id="email-help">Enter an email address with at least eight characters.</p>
+
+                <label for="topic">Topic (required)</label>
+                <select id="topic" name="topic" class="required" required>
+                    <option value="">Choose a topic</option>
+                    <option value="general">General question</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Technical support</option>
+                </select>
+
+                <input type="button" id="submit-button" value="Submit">
+            </form>
+            <p><span id="missing-count" role="status" aria-live="polite"></span></p>
+            <p id="validation-result" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Jackson Matney</p>
+    </footer>
+</body>
+</html>
